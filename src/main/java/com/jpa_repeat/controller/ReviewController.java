@@ -11,7 +11,7 @@ import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
-public class RevieController {
+public class ReviewController {
 
     private final ReviewService reviewService;
 
