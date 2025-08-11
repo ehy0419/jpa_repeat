@@ -34,4 +34,26 @@ public class MovieService {
                         movie.getTitle()
                 )).toList();
     }
+
+    @Transactional(readOnly = true)
+    public MovieResponse findOne(Long id) {
+        Movie movie = movieRepository.findById(id).orElseThrow(
+                () -> new IllegalArgumentException("이 moiveId는 없습니다")
+        );
+        return new MovieResponse(
+                movie.getId(),
+                movie.getTitle()
+        );
+    }
+
+    @Transactional
+    public MovieResponse update(Long id, MovieRequest movieRequest) {
+        Movie movie = movieRepository.findById(id).orElseThrow(
+                () -> new IllegalArgumentException("이 moiveId는 없습니다")
+        );
+        return new MovieResponse(
+                movie.getId(),
+                movie.getTitle()
+        );
+    }
 }
