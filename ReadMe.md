@@ -14,4 +14,14 @@ review 엔티티
 new EntityNotFoundException("Movie not found"));
 
 오타 발견
-@RequestBody MovieRequest request           // 오타 @ResponseBody MovideRequest request
+1) @ResponseBody MovideRequest request
+으로 수정 @RequestBody MovieRequest request
+2) dd
+
+
+궁금한 것
+FetchType.LAZY 
+FetchType.EAGER
+
+nullable = false
+nullable = true
